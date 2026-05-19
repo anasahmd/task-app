@@ -1,11 +1,7 @@
 import Task from '../models/task.js';
 import errorFormatter from "../helpers/errorFormatter.js";
 
-<<<<<<< HEAD
 const listAllTasks = async (req, res) => {
-=======
-export const listAllTasks = async (req, res) => {
->>>>>>> 5cb72b0 (Up till May 14)
   try {
     const tasks = await Task.find();
     res.json({ count: tasks.length, data: tasks});
@@ -14,11 +10,7 @@ export const listAllTasks = async (req, res) => {
   }
 }
 
-<<<<<<< HEAD
 const postTask = async (req, res) => {
-=======
-export const postTask = async (req, res) => {
->>>>>>> 5cb72b0 (Up till May 14)
   if (!req.body) {
     return res.status(400).json({ message: 'Data not provided' });
   }
@@ -40,11 +32,7 @@ export const postTask = async (req, res) => {
   }
 }
 
-<<<<<<< HEAD
 const getTaskById = async (req, res) => {
-=======
-export const getTaskById = async (req, res) => {
->>>>>>> 5cb72b0 (Up till May 14)
   const { id } = req.params;
 
   try {
@@ -61,11 +49,7 @@ export const getTaskById = async (req, res) => {
   }
 }
 
-<<<<<<< HEAD
 const updateTask = async (req, res) => {
-=======
-export const updateTask = async (req, res) => {
->>>>>>> 5cb72b0 (Up till May 14)
   if (!req.body) {
     return res.status(400).json({ message: 'Data not provided' });
   }
@@ -89,11 +73,7 @@ export const updateTask = async (req, res) => {
   }
 }
 
-<<<<<<< HEAD
 const deleteTask = async (req, res) => {
-=======
-export const deleteTask = async (req, res) => {
->>>>>>> 5cb72b0 (Up till May 14)
   const { id } = req.params;
 
   try {
@@ -110,10 +90,7 @@ export const deleteTask = async (req, res) => {
     }
     res.status(500).json({ message: 'Something went wrong' });
   }
-<<<<<<< HEAD
 }
 
 export default { listAllTasks, postTask, getTaskById, updateTask, deleteTask }
-=======
-}
->>>>>>> 5cb72b0 (Up till May 14)
+
